@@ -34,7 +34,7 @@ public class CarController {
 // Starta timer
         cc.timer.start();
     }
-    // ================= TIMER =================
+    //TIMER
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             Iterator<AbstractCar> iterator = cars.iterator();
@@ -47,7 +47,7 @@ public class CarController {
             frame.drawPanel.repaint();
         }
     }
-    // ================= VÄGGKOLLISION =================
+    //VÄGGKOLLISION
     private void handleWallCollision(AbstractCar car) {
         if (car.getX() < 0 ||
                 car.getX() > frame.drawPanel.getWidth() - 100) {
@@ -64,7 +64,7 @@ public class CarController {
             car.startEngine();
         }
     }
-    // ================= WORKSHOP =================
+    //WORKSHOP
     private void handleWorkshopCollision(AbstractCar car,
                                          Iterator<AbstractCar> iterator) {
         if (car instanceof Volvo240 volvo) {
@@ -78,7 +78,7 @@ public class CarController {
             }
         }
     }
-    // ================= KNAPP-METODER =================
+    //KNAPP-METODER 
     void gas(int amount) {
         double gas = amount / 100.0;
         for (AbstractCar car : cars) {
